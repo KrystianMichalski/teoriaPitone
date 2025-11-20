@@ -39,9 +39,12 @@ def create_pdf():
     nuovo_libro = {
         "titolo": titolo,
         "autore": autore,
-        "isbn": isbn
+        "isbn": isbn,
+        "categoria: categoria
     }
     """
+    pdf.add_page()
+
     pdf.multi_cell(0, 6, code_todo1, 1, 'L', True)
     pdf.set_font("Arial", 'I', 10)
     pdf.multi_cell(0, 6, "Nota: Verificare che usino le virgolette per le chiavi (es. \"titolo\") e i due punti corretti.")
