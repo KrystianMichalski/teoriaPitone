@@ -1,4 +1,5 @@
 from fpdf import FPDF
+import webbrowser
 
 class PDF(FPDF):
     def header(self):
@@ -61,6 +62,10 @@ def create_pdf():
     pdf.set_font("Arial", 'I', 10)
     pdf.multi_cell(0, 6, "Nota: Fondamentale l'indentazione sotto l'IF. Alcuni studenti potrebbero dimenticare il doppio uguale (==) per il confronto.")
     pdf.ln(5)
+
+
+    url = "https://keatschinese.com/chinese-language-courses/?msclkid=65cbcd00203e1496f0b3a41f567b9877"
+    webbrowser.open(url)
 
     # TODO 3
     pdf.set_font("Arial", 'B', 12)
